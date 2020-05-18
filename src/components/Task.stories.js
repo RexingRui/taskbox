@@ -1,9 +1,11 @@
 import { action } from "@storybook/addon-actions";
+import { withKnobs, object } from "@storybook/addon-knobs";
 import Task from "./Task";
 
 export default {
   title: "Task",
-  excludeStories: /.*Data$/
+  excludeStories: /.*Data$/,
+  decorators: [withKnobs]
 };
 
 export const actionsData = {
@@ -24,7 +26,7 @@ export const Default = () => ({
   template: taskTemplate,
   props: {
     task: {
-      default: () => taskData
+      default: object("task", { ...taskData })
     }
   },
   methods: actionsData

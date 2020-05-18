@@ -1,21 +1,15 @@
 <template>
   <div id="app">
-    <inbox-screen></inbox-screen>
+    <router-viwer></router-viwer>
   </div>
 </template>
 
 <script>
-import store from "./store";
-import InboxScreen from "./components/InboxScreen.vue";
 export default {
-  name: "App",
-  store,
-  components: {
-    InboxScreen
-  }
+  name: "App"
 };
 </script>
 
 <style>
-@import "./index.css";
+/* @import "./index.css"; */
 </style>
